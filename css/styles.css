@@ -1,0 +1,53 @@
+body {
+  background: url(../images/backgroundPattern.png);
+}
+
+.container {
+  position: relative;
+  width: 735px;
+  height: 542px;
+  margin: auto;
+  top: 80px;
+  display: grid;
+  grid-template: repeat(2, 50%) / repeat(2, 50%);
+  border: 6px solid #906e53;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.icard {
+  margin: 5px;
+  background-color: gold;
+}
+
+.name-section {
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template: 15% 20% 45% 20% / 100%;
+}
+
+.ns-header {
+  
+}
+
+.ns-input {
+  background-color: azure;
+}
+
+.ns-gender {
+  background-color: violet;
+}
+
+.ns-submit {
+  background-color: blueviolet;
+}
+
+.predection-section {
+  grid-column: 2;
+  background-color: blue;
+}
+
+.history-section {
+  grid-column: 2;
+  background-color: brown;
+}
