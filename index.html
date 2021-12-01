@@ -15,19 +15,48 @@
         <div class="ns-header">
           <h1>Mr. Or Ms. ?!</h1>
         </div>
-        <div class="ns-input"></div>
-        <div class="ns-gender"></div>
-        <div class="ns-submit"></div>
+        <div class="ns-input">
+          <label>Name</label><br />
+          <input type="text" required />
+        </div>
+        <div class="ns-gender">
+          <input type="radio" name="select" id="option-1" checked />
+          <input type="radio" name="select" id="option-2" />
+          <label for="option-1" class="option option-1">
+            <div class="dot"></div>
+            <span>Male</span>
+          </label>
+          <label for="option-2" class="option option-2">
+            <div class="dot"></div>
+            <span>Female</span>
+          </label>
+        </div>
+        <div class="ns-submit">
+          <button class="submit-button">Submit</button>
+        </div>
       </div>
       <div class="icard predection-section">
-        <div class="ps-header"></div>
-        <div class="ps-result"></div>
-        <div class="ps-resultbar"></div>
+        <div class="ps-header">
+          <p>Predection</p>
+        </div>
+        <div class="ps-result">
+          <label>Male 83%</label>
+        </div>
+        <div class="ps-resultbar">
+          <div class="ps-resultbar-fill"></div>
+        </div>
       </div>
       <div class="icard history-section">
-        <div class="hs-header"></div>
-        <div class="hs-result"></div>
-        <div class="hs-choice"></div>
+        <div class="hs-header">
+          <lable>Saved History</lable>
+        </div>
+        <div class="hs-result">
+          <lable>.: Male :.</lable>
+        </div>
+        <div class="hs-choice">
+          <button class="save-button">Save</button>
+          <button class="clear-button">Clear</button>
+        </div>
       </div>
     </div>
   </body>
