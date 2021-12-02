@@ -178,7 +178,7 @@ input[type="radio"] {
 }
 
 .ps-result {
-  margin-left: 58px;
+  text-align-last: center;
   font-size: 48px;
   padding-top: 40px;
   font: bolder;
@@ -197,10 +197,11 @@ input[type="radio"] {
 }
 
 .ps-resultbar-fill {
+  transition-duration: 1s;
   margin-top: 0.5px;
   background-color: #906e53;
   border-radius: 22px;
-  width: 262px;
+  width: 0px;
   height: 30px;
   border: none;
 }

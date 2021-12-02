@@ -1,8 +1,11 @@
 function submit() {
     let url = "https://api.genderize.io/?name=" + document.getElementById("input-name-id").value;
     console.log(url);
-    let resp;
-    fetch(url).then(response => response.json()).then(data => console.log(data));
+    fetch(url).then((resp)=>resp.json()).then((data)=>(
+    document.getElementById("ps-result-id").innerText = data["gender"].charAt(0).toUpperCase() + data["gender"].slice(1) + " " + data["probability"]*100 + "%",
+    document.getElementById("ps-resultbar-fill-id").style.width = 300 * data["probability"].toString() + "px" ,
+    console.log(data)
+    ));
 }
 
 function clear() {
