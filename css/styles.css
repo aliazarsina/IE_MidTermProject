@@ -216,16 +216,16 @@ input[type="radio"] {
 }
 
 .hs-header {
-  margin-left: 50px;
+  text-align-last: center;
   padding-top: 30px;
-  font-size: 36px;
+  font-size: 32px;
   align-items: center;
 }
 
 .hs-result {
   display: grid;
   grid-template: 100% / 100%;
-  padding-left: 75px;
+  text-align-last: center;
   padding-top: 5px;
   font-size: 48px;
   font: bold;
@@ -234,33 +234,60 @@ input[type="radio"] {
 
 .hs-choice {
   display: grid;
-  grid-template: 100% / 50% 50%;
+  grid-template: 100% / 33% 33% 34%;
 }
 
-.save-button {
+.save-button-me {
   width: 70%;
   height: 65%;
   border: none;
   border-radius: 20px;
   background-color: #e4d2c3;
-  margin-left: 45px;
+  margin-left: 42px;
   margin-bottom: 10px;
-  font-size: 150%;
+  font-size: 80%;
   font: bold;
   padding: 0px 0px;
   text-align: center;
 }
 
-.save-button:hover {
+.save-button-me:hover {
   transition-duration: 0.2s;
   background-color: #906e53;
   color: #fff;
-  font-size: 155%;
+  font-size: 85%;
 }
 
-.save-button:active {
+.save-button-me:active {
   transform: translateY(4px);
 }
+
+.save-button-api {
+  width: 70%;
+  height: 65%;
+  border: none;
+  border-radius: 20px;
+  background-color: #e4d2c3;
+  margin-bottom: 10px;
+  margin-left: 22px;
+  font-size: 80%;
+  font: bold;
+  padding: 0px 0px;
+  text-align: center;
+}
+
+.save-button-api:hover {
+  transition-duration: 0.2s;
+  background-color: #906e53;
+  color: #fff;
+  font-size: 85%;
+}
+
+.save-button-api:active {
+  transform: translateY(4px);
+}
+
+
 
 .clear-button {
   width: 70%;
@@ -268,7 +295,6 @@ input[type="radio"] {
   border: none;
   border-radius: 20px;
   background-color: #e4d2c3;
-  margin-left: 10px;
   font-size: 150%;
   font: bold;
   padding: 0px 0px;
