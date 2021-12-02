@@ -22,18 +22,48 @@ function submit() {
     else 
         document.getElementById("hs-result-id").innerText = ".: Nothing :."
 
-    document.getElementById("option-1").checked = false;
-    document.getElementById("option-2").checked = false;
-
+    clear();
 }
 
 function savePredectedResultMe() {
-    if (predectedGender != null) {
-        localStorage.setItem(userEnteredName,predectedGender)
+    if (userEnteredName != null) {
+        if (predectedGender != null) {
+            localStorage.setItem(userEnteredName,predectedGender)
+            document.getElementById("hs-result-id").innerText = "Saved !"
+            document.getElementById("hs-result-id").innerText = ".: " + predectedGender +" :."
+        } else
+            alert("Error, Predect A Gender First !")
+    } else {
+        alert("Error, Enter A Name First !")
+    }
+
+    document.getElementById("option-1").checked = false;
+    document.getElementById("option-2").checked = false;
+    predectedGender = null
+}
+
+function savePredectedResultAPI() {
+    if (userEnteredName != null) {
+        if (predectedResult != null) {
+        localStorage.setItem(userEnteredName,predectedResult)
         document.getElementById("hs-result-id").innerText = "Saved !"
-        document.getElementById("hs-result-id").innerText = ".: " + predectedGender +" :."
+        document.getElementById("hs-result-id").innerText = ".: " + predectedResult +" :."
+        } else 
+            alert("Error, Submit A Name First !")
     } else
-        console.log("Error, Predect A Gender First !")
+        alert("Error, Enter A Name First !")
+
+    document.getElementById("option-1").checked = false;
+    document.getElementById("option-2").checked = false;
+    predectedResult = null;
+}
+
+function clearLocalStorage() {
+    localStorage.removeItem(userEnteredName)
+    document.getElementById("hs-result-id").innerText = "Deleted !"
+    document.getElementById("hs-result-id").innerText = ".: Nothing :."
+    document.getElementById("option-1").checked = false;
+    document.getElementById("option-2").checked = false;
 }
 
 function clear() {
@@ -42,5 +72,7 @@ function clear() {
 }
 
 document.getElementById("submit-button-id").addEventListener("click", submit)
-document.getElementById("input-name-id").addEventListener("click", clear)
+// document.getElementById("input-name-id").addEventListener("click", clear)
 document.getElementById("save-button-me-id").addEventListener("click", savePredectedResultMe)
+document.getElementById("save-button-api-id").addEventListener("click", savePredectedResultAPI)
+document.getElementById("clear-button-id").addEventListener("click", clearLocalStorage)
