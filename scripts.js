@@ -60,9 +60,13 @@ function savePredectedResultMe() {
     predectedGender = null
 }
 
+// این تابع زمانی که کاربر بخواهد جنسیت پیشبینی شده توسط سیستم را برای یک نام خاص ذخیره نماید فراخوانی خواهد شد
 function savePredectedResultAPI() {
+    // در این دو شرط ابتدایی چک میشود که کاربر نام وارد کرده باشد و توسط سیستم جنسیتی برای آن پیشبینی شده باشد
     if (userEnteredName != null) {
         if (predectedResult != null) {
+        //در این قسمت نامی که کاربر وارد کرده به همراه جنسیتی که سیستم برای آن پیش بینی کرده است، برای آن اسم ذخیره میشود 
+        // و این اسم در قسمت مربوطه در سایت نمایش داده خوهد شد
         localStorage.setItem(userEnteredName,predectedResult)
         document.getElementById("hs-result-id").innerText = "Saved !"
         document.getElementById("hs-result-id").innerText = ".: " + predectedResult +" :."
@@ -76,7 +80,9 @@ function savePredectedResultAPI() {
     predectedResult = null;
 }
 
+// این تابع زمانی که کاربر دکمه پاک کرده را فشار دهد فراخوانی می شود
 function clearLocalStorage() {
+    // این تابع اسم وارد شده توسط کاربر را که قبلا در تابع سابمیت گرفته شده  بود را از حافظه داخلی پاک می نماید
     localStorage.removeItem(userEnteredName)
     document.getElementById("hs-result-id").innerText = "Deleted !"
     document.getElementById("hs-result-id").innerText = ".: Nothing :."
@@ -84,11 +90,13 @@ function clearLocalStorage() {
     document.getElementById("option-2").checked = false;
 }
 
-function clear() {
-    if (document.getElementById("input-name-id").value != null)
-        document.getElementById("input-name-id").value = null
-}
+// function clear() {
+//     if (document.getElementById("input-name-id").value != null)
+//         document.getElementById("input-name-id").value = null
+// }
 
+
+// در این قسمت دکمه های مختلف را به تابع های مربوط به آنها وصل مینماییم
 document.getElementById("submit-button-id").addEventListener("click", submit)
 // document.getElementById("input-name-id").addEventListener("click", clear)
 document.getElementById("save-button-me-id").addEventListener("click", savePredectedResultMe)
