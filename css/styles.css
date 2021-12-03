@@ -1,9 +1,16 @@
+/* در این قسمت فونت سایت از آدرس داده شده ایمپورت میشود  */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
 
+/* در این قسمت تصویر بکگراند سایت و مشخصات فونت استفاده شده تعیین میشود */
 body {
   background: url(../images/backgroundPattern.png);
   font-family: "Montserrat", sans-serif;
 }
+
+/* این بلاک وظیفه نگه داری سه بخش اصلی پروژه را دارد (قسمت وارد کردن اسم - قسمت پیش بینی سایت - قسمت ذخیره و بازیابی)
+نوع بلوک بندی استفاده شدن گرید می باشد (گرید دو در دو)
+برای زیبایی بیشتر بخش های مختلف در سه کادر جدا تعریف شده اند و کادر و پس زمینه ای برای این بلوک اصلی نگه دارنده تعریف نشده است
+سایر موارد مثل سایز و موقعیت احتیاجی به توضیح ندارند */
 
 .container {
   position: relative;
@@ -18,10 +25,14 @@ body {
   /* background-color: rgba(255, 255, 255, 0.9); */
 }
 
+/* این کلاس کلاس کلی و پدر سه قسمت اصلی می باشد، صرفا برای زیبایی بهتر یک فاصله 5 پیشکسلی برای آنها تعریف شده است */
 .icard {
   margin: 5px;
 }
 
+/* کلیات قسمت ورودی درا ین بلاک تنظیم شده است، برای رنگ نیز از قابلیتی با امکان تنظیم شفافیت پس زمینه استفاده شده است
+در قسمت اول مشخص کرده ایم که این بلاک دو خانه پشت سر هم عمودی از گرید بلاک نگهدارنده (بلاک قبلی) را به خود اختصاص میدهد
+خود این بلاک هم توسط گرید به 4 بخش تقسیم شده است */
 .name-section {
   border: 6px solid #906e53;
   background-color: rgba(255, 255, 255, 0.9);
@@ -33,12 +44,14 @@ body {
   margin-bottom: 20px;
 }
 
+/* بخش اول قسمت ورودی نام سایت و عنوان سایت میباشد */
 .ns-header {
   display: grid;
   grid-template: 100% / 100%;
   margin: auto;
 }
 
+/* برای عنوان سایت از تگ اچ1 استفاده شده است و مشخصات این تگ در اینجا تعریف شده است */
 h1 {
   margin-top: 90px;
   color: black;
@@ -46,12 +59,14 @@ h1 {
   font-size: 42px;
 }
 
+/* این بلاک بلاک کادر وارد کردن نام می باشد که در این قسمت کلیات آن و موقعیت آن تعیین شده است */
 .ns-input {
   position: relative;
   margin-top: 10px;
   margin-left: 65px;
 }
 
+/* این قسمت مشخصات کادر ورودی را تعیین و مشخص مینماید */
 input {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
@@ -59,10 +74,12 @@ input {
   border: 3px solid #906e53;
   border-radius: 15px;
 }
+/* در این بلاک مشخص میکنیم که در صورت کلیک کادر دور ورودی دچار تغییر رنگ به مشکی نشود */
 input:focus {
   outline: none;
 }
 
+/* در این قسمت مشخصات بلاک  دو دکمه رادیویی انتخاب جنسیت مشخص میشود */
 .ns-gender {
   display: inline-flex;
   height: 50px;
@@ -72,6 +89,8 @@ input:focus {
   padding: 20px 15px;
 }
 
+/* این قسمت مشخصات کلی خود بلاک ها تعیین میشود
+تنها نکته خاص این قسمت خط آخر است که زمان نشان داده تغییرات را 3دهم ثانیه تعیین میکند  */
 .ns-gender .option {
   background: #e4d2c3;
   height: 100%;
@@ -86,6 +105,7 @@ input:focus {
   border: none;
   transition: all 0.3s ease;
 }
+/* این قسمت مشخصات دایره سفیدرنگ داخل کادر این دو دکمه را مشخص میکند */
 .ns-gender .option .dot {
   height: 20px;
   width: 20px;
@@ -93,6 +113,7 @@ input:focus {
   border-radius: 50%;
   position: relative;
 }
+/* این قسمت مشخصات کادرهایی که نامها در آن نمایش داده میشوند را تعیین میکند (مشخصات قبل از انتخاب توسط کاربر) */
 .ns-gender .option .dot::before {
   position: absolute;
   content: "";
@@ -106,9 +127,11 @@ input:focus {
   transform: scale(1.5);
   transition: all 0.3s ease;
 }
+/* توسط این قسمت دو دکمه پیشفرض رادیویی را نمایش نمیدهیم */
 input[type="radio"] {
   display: none;
 }
+/* در چند قسمت بعدی مشخصات دکمه ها زمانی که توسط کاربر انتخاب شده و تغییر رنگ پیدا میکنند نمایش داده میشود */
 #option-1:checked:checked ~ .option-1,
 #option-2:checked:checked ~ .option-2 {
   border: none;
@@ -132,11 +155,13 @@ input[type="radio"] {
   color: #fff;
 }
 
+/* در این قسمت مشخصات کلی بلاک دکمه سابمیت تعیین میشود */
 .ns-submit {
   display: grid;
   grid-template: 100% / 100%;
 }
 
+/* در این قسمت مشخصات خود دکمه اعم از رنگ و اندازه و موقعیت مشخص میشود (نکته خاصی در این قسمت وجود ندارد) */
 .submit-button {
   width: 70%;
   height: 35%;
@@ -151,6 +176,7 @@ input[type="radio"] {
   text-align: center;
 }
 
+/* در این قسمت مشخصات دکمه زمانی که موس بر روی آن میرود مشخص شده است (دکمه و متن و اندازه متن آن تغییر میکنند */
 .submit-button:hover {
   transition-duration: 0.2s;
   background-color: #906e53;
@@ -158,10 +184,13 @@ input[type="radio"] {
   font-size: 215%;
 }
 
+/* این قسمت هنگامی که دکمه فشار داده میشود موقعیت آنرا کمی پایین میبرد تا کاربر متوجه فشار دادن دکمه بشود */
 .submit-button:active {
   transform: translateY(4px);
 }
 
+/* این قسمت مشخصات کلی بلوک اصلی دوم، یعنی قسمتی که پیشبینی سایت نمایش داده میشود را تنظیم میکند
+این قسمت نیز مجددا تقسیم بندی گرید شده تا قسمت های مختلق این بخش در آن قرار بگیرند */
 .predection-section {
   border: 6px solid #906e53;
   background-color: rgba(255, 255, 255, 0.9);
@@ -171,12 +200,14 @@ input[type="radio"] {
   margin-top: 20px;
 }
 
+/* این قسمت هدر و عنوان اصلی این بخش را تنظیم میکند */
 .ps-header {
   margin-left: 70px;
   font-size: 36px;
   align-items: center;
 }
 
+/* این قسمت عنوان پیش بینی شده توسط سایت (جنسیت به همراه درصد درستی) را تنظیم میکند که نکته خاصی ندارد */
 .ps-result {
   text-align-last: center;
   font-size: 48px;
@@ -185,6 +216,8 @@ input[type="radio"] {
   color: #906e53;
 }
 
+/* این قسمت کادر اصلی درصد درستی را تشکیل میدهد و مشخصات آن را تعیین میکند
+این قسمت از تقسیم بندی گرید برای قرار گرفتن مستطیل پر شدن درصد درستی استفاده میکند */
 .ps-resultbar {
   margin-top: 10px;
   margin-left: 22px;
@@ -196,6 +229,8 @@ input[type="radio"] {
   grid-template: 100% / 100%;
 }
 
+/* این قسمت مشخصات مستطیلی که میزان پرشدن درصد درستی نام پیشبینی شده را نشان میدهد را تنظیم میکند
+برای نمایش زیباتر در این قسمت نیز از زمان برای ایجاد ترنزیشن استفاده شده است */
 .ps-resultbar-fill {
   transition-duration: 1s;
   margin-top: 0.5px;
@@ -206,6 +241,8 @@ input[type="radio"] {
   border: none;
 }
 
+/* این قسمت بلوک اصلی سوم یعنی قسمت نمایش تاریخچه و مشخصات آنرا تنظیم میکند
+این قسمت نیز از تقسیم بندی گرید برای بلوک های داخلی خود استفاده میکند */
 .history-section {
   border: 6px solid #906e53;
   background-color: rgba(255, 255, 255, 0.9);
@@ -215,6 +252,7 @@ input[type="radio"] {
   margin-bottom: 20px;
 }
 
+/* این قسمت عنوان بخش آخر یعنی تاریخچه را تنظیم میکند */
 .hs-header {
   text-align-last: center;
   padding-top: 30px;
@@ -222,6 +260,7 @@ input[type="radio"] {
   align-items: center;
 }
 
+/* این قسمت نتیجه نمایش داده شده را (زن مرد یا هیچی) تنظیم میکند */
 .hs-result {
   display: grid;
   grid-template: 100% / 100%;
@@ -232,11 +271,14 @@ input[type="radio"] {
   color: #906e53;
 }
 
+/* این قسمت بلوک بندی کلی سه دکمه سیو و پاک کرده را تنظیم میکند */
 .hs-choice {
   display: grid;
   grid-template: 100% / 33% 33% 34%;
 }
 
+/* این قسمت مشخصات دکمه ذخیره مشخصات وارد شده توسط کاربر را تنظیم میکند
+این تنظیمات مشابه دکمه سابمیت بوده و نکته خاصی ندارند */
 .save-button-me {
   width: 70%;
   height: 65%;
@@ -250,18 +292,26 @@ input[type="radio"] {
   padding: 0px 0px;
   text-align: center;
 }
-
+/*  این بلوک هنگام رفتن موس روی دکمه ذخیره پیشبینی کاربر فعال میشود و شکل دکمه را تغییر میدهد */
 .save-button-me:hover {
   transition-duration: 0.2s;
   background-color: #906e53;
   color: #fff;
   font-size: 85%;
 }
-
+/*  این تنظیمات هنگام فشار دادن دکمه ذخیره فعال میشوند */
 .save-button-me:active {
   transform: translateY(4px);
 }
 
+/*
+
+این دکمه تنظیمات دکمه ذخیره پیشبنی سایت میباشد 
+این دکمه و دکمه بعدی نات خاصی ندارند و تکراری میباشد (برای این دکمه ها باید یک کلاس یکسان تعریف میشد که از قطعه کد تکراری داشتن
+در کد جلوگیری میشد که متاسفانه انجام نشده است
+:)))
+
+*/
 .save-button-api {
   width: 70%;
   height: 65%;
@@ -286,8 +336,6 @@ input[type="radio"] {
 .save-button-api:active {
   transform: translateY(4px);
 }
-
-
 
 .clear-button {
   width: 70%;
